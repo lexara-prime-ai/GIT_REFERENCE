@@ -68,3 +68,35 @@ git merge upstream/main
 git push origin main
 ``` 
 * This process ensures that your fork's `main` branch is up to date with the latest changes from the original repository before you start working on a new branch.
+
+## Deleting a branch both locally and remotely
+
+### 1. **Delete the branch locally:**
+
+Make sure you're not currently on the branch you want to delete (switch to `main` or another branch if needed):
+
+```bash
+git checkout main
+``` 
+
+* Then delete the branch **locally**:
+
+```bash
+git branch -d scr_55_implement_create_table_on_catalog
+``` 
+
+If you want to force delete (e.g., if the branch has unmerged changes):
+
+```bash
+git branch -D scr_55_implement_create_table_on_catalog
+``` 
+
+### 2. **Delete the branch remotely:**
+
+To delete the remote branch, use the following command:
+
+```bash
+git push origin --delete scr_55_implement_create_table_on_catalog
+``` 
+
+* After running these commands, the branch will be deleted both locally and remotely.
